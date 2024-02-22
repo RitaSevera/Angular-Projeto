@@ -1,0 +1,41 @@
+<!-- <p>marcacoes-lista works!</p> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Tipo</th>
+      <th scope="col">Animal</th>
+      <th scope="col">Tutor</th>
+      <th scope="col">Data e hora</th>
+      <th scope="col">Realizada</th>
+      <th scope="col">Cancelada</th>
+    </tr>
+  </thead>
+
+<tbody>
+  @for (marcacao of marcacoes; track marcacao.id) {
+	  <tr>
+	    <td>{{ marcacao.tipo }}</td>
+	    <td>{{ marcacao.animalId }}</td>
+	    <td>{{ marcacao.tutorId }}</td>
+	    <td>{{ marcacao.dataHora }}</td>
+      <td>{{ marcacao.realizada }}</td>
+      <td>{{ marcacao.cancelada }}</td>
+      <button type="button" class="btn btn-info" [routerLink]="['/editar-marcacao/marcacao.id']">Editar</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-marcacao/marcacao.id']">Eliminar</button>
+	  </tr>
+  } @empty {
+    @if (marcacoes) {
+	    <tr>
+	      <td colspan="4">Não há marcações!</td>
+	    </tr>
+    } @else {
+	    <tr>
+	      <td colspan="4">A carregar as marcações...</td>
+	    </tr>
+    }
+  }
+</tbody>
+</table>
+
+

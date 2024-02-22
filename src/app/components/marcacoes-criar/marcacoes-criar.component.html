@@ -1,0 +1,58 @@
+<!-- <p>marcacoes-criar works!</p> -->
+<br>
+<div class="container">
+  <div>
+    <h4>Nova marcação</h4>
+  </div>
+
+  <table class="table">
+<div>
+  <form [formGroup] ="formularioMarcacao" (ngSubmit) ="handleSubmit()">
+    <div>
+      <th scope="col">Tipo</th>
+      <input formControlName ="tipo" type="text" id="tipo" />
+      @if ((submitted || formularioMarcacao.controls['tipo'].touched) && formularioMarcacao.controls['tipo'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['tipo'].errors['required']) {
+        <span>O Tipo é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <th scope="col">ID Animal</th>
+      <input formControlName ="animalId" type="text" id="animalId" />
+      @if ((submitted || formularioMarcacao.controls['animalId'].touched) && formularioMarcacao.controls['animalId'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['animalId'].errors['required']) {
+        <span>O ID do Animal é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <th scope="col">ID Tutor</th>
+      <input formControlName ="tutorId" type="text" id="tutorId" />
+      @if ((submitted || formularioMarcacao.controls['tutorId'].touched) && formularioMarcacao.controls['tutorId'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['tutorId'].errors['required']) {
+        <span>O ID do Tutor é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <th scope="col">Data e hora</th>
+      <input formControlName ="dataHora" type="datetime-local" id="dataHora" />
+      @if ((submitted || formularioMarcacao.controls['dataHora'].touched) && formularioMarcacao.controls['dataHora'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['dataHora'].errors['required']) {
+        <span>A Data e Hora é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <br>
+    <button type="submit" [disabled]="submitted && formularioMarcacao.invalid" class="btn btn-outline-secondary">Confirmar marcação</button>
+  </form>
+</div>
