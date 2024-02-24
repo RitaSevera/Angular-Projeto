@@ -14,8 +14,8 @@
   @for (marcacao of marcacoes; track marcacao.id) {
 	  <tr>
 	    <td>{{ marcacao.tipo }}</td>
-	    <td>{{ marcacao.animalId }}</td>
-	    <td>{{ marcacao.tutorId }}</td>
+	    <td>{{ nomeAnimal(marcacao.animalId)}}</td>
+	    <td>{{ nomeTutor(marcacao.tutorId)}}</td>
 	    <td>{{ marcacao.dataHora }}</td>
       <td>{{ marcacao.realizada }}</td>
       <td>{{ marcacao.cancelada }}</td>

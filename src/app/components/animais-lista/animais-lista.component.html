@@ -6,7 +6,7 @@
       <th scope="col">Raça</th>
       <th scope="col">Sexo</th>
       <th scope="col">Data de nascimento</th>
-      <th scope="col">ID Tutor</th>
+      <th scope="col">Tutor</th>
     </tr>
   </thead>
 
@@ -18,7 +18,7 @@
 	    <td>{{ animal.raca }}</td>
 	    <td>{{ animal.sexo }}</td>
       <td>{{ animal.dataNascimento }}</td>
-      <td>{{ animal.tutorId }}</td>
+      <td>{{ nomeTutor(animal.tutorId)}}</td>
       <button type="button" class="btn btn-info" [routerLink]="['/editar-animal/',animal.id]">Editar</button>
       <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-animal/', animal.id]">Eliminar</button>
 	  </tr>
