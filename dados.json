@@ -5,76 +5,64 @@
       "nome": "Lola",
       "especie": "Cão",
       "raca": "Dálmata",
-      "sexo": "f",
-      "dataNascimento": "2021-04-10T00:00",
-      "tutorId": ""
+      "sexo": "Feminino",
+      "dataNascimento": "2021-04-10",
+      "tutorId": "58aa"
     },
     {
-      "id": "ab75",
-      "nome": "Mimi",
+      "id": "11e5",
+      "nome": "Kuiko",
       "especie": "Gato",
-      "raca": "Siamês",
-      "sexo": "f",
-      "dataNascimento": "2020-07-20T00:00",
-      "tutorId": ""
+      "raca": "Persa",
+      "sexo": "Masculino",
+      "dataNascimento": "2009-02-24",
+      "tutorId": "58aa"
     }
   ],
   "tutores": [
     {
-      "id": "892a",
-      "nome": "Ana",
-      "telemovel": "934567891",
-      "email": "ana@hotmail.com"
-    },
-    {
       "id": "58aa",
       "nome": "Carlos",
       "telemovel": "978912345",
-      "email": "carlos@gmail.com"
+      "email": "carlows@gmail.com"
+    },
+    {
+      "id": "ce67",
+      "nome": "Rita",
+      "telemovel": "915078097",
+      "email": "rita@hotmail.com"
     }
   ],
   "marcacoes": [
     {
       "id": "992a",
       "tipo": "Consulta",
-      "animalId": "982a",
+      "animalId": "1",
       "tutorId": "892a",
-      "dataHora": "2024-02-21T09:25"
-    },
-    {
-      "id": "ac25",
-      "tipo": "Consulta",
-      "animalId": "ab75",
-      "tutorId": "58aa",
-      "dataHora": "2024-02-21T010:10"
+      "dataHora": "2024-02-21T09:25",
+      "realizada": true
     },
     {
       "id": "55fa",
       "tipo": "Vacina",
-      "animalId": "982a",
-      "tutorId": "892a",
-      "dataHora": "2024-02-29T09:50"
-    },
-    {
-      "id": "56ec",
-      "tipo": "Cão",
-      "animalId": "1",
-      "tutorId": "1",
-      "dataHora": "2024-02-23T14:15"
-    },
-    {
-      "id": "03a7",
-      "tipo": "Consulta",
-      "animalId": "2",
-      "tutorId": "2",
-      "dataHora": "2024-02-29T15:45"
-    },
-    {
-      "id": "a746",
-      "tipo": "Consulta",
       "animalId": "3",
-      "tutorId": "3",
-      "dataHora": "2024-02-29T15:20"
+      "tutorId": "2",
+      "dataHora": "2024-02-29T09:50",
+      "realizada": true
+    },
+    {
+      "id": "c3bb",
+      "tipo": "Vacina",
+      "animalId": "4",
+      "tutorId": "1",
+      "dataHora": "2024-02-26T15:45"
+    },
+    {
+      "id": "f8fc",
+      "tipo": "Exame",
+      "animalId": "5",
+      "tutorId": "8",
+      "dataHora": "2024-03-07T15:00"
     }
   ]
 }

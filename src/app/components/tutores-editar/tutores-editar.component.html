@@ -1,0 +1,47 @@
+<br>
+<div class="container">
+  <div>
+    <h4>Editar Tutor</h4>
+  </div>
+
+  <table class="table">
+<div>
+  <form [formGroup] ="formularioTutor" (ngSubmit) ="handleSubmit()">
+    <div>
+      <th scope="col">Nome</th>
+      <input formControlName ="nome" type="text" id="nome" />
+      @if ((submitted || formularioTutor.controls['nome'].touched) && formularioTutor.controls['nome'].errors) {
+      <div>
+        @if (formularioTutor.controls['nome'].errors['required']) {
+        <span>O nome é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <th scope="col">Telemóvel</th>
+      <input formControlName ="telemovel" type="tel" id="telemovel" />
+      @if ((submitted || formularioTutor.controls['telemovel'].touched) && formularioTutor.controls['telemovel'].errors) {
+      <div>
+        @if (formularioTutor.controls['telemovel'].errors['required']) {
+        <span>O telemóvel é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <th scope="col">Email</th>
+      <input formControlName ="email" type="text" id="email" />
+      @if ((submitted || formularioTutor.controls['email'].touched) && formularioTutor.controls['email'].errors) {
+      <div>
+        @if (formularioTutor.controls['email'].errors['required']) {
+        <span>O email é obrigatório</span>
+        }
+      </div>
+      }
+    </div>
+
+    <br>
+    <button type="submit" [disabled]="submitted && formularioTutor.invalid" class="btn btn-outline-secondary">Editar</button>
+  </form>
+</div>

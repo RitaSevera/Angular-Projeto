@@ -19,15 +19,9 @@ export class MarcacoesEliminarComponent {
 
   constructor(private route: ActivatedRoute, private router: Router, private marcacaoService: MarcacoesService) {}
 
-  // ngOnInit(): void {
-  //   const id = this.route.snapshot.paramMap.get('id');
-  //     if (id) {
-  //       this.marcacaoService.getById(id).subscribe(result => this.marcacao = result);
-  //     }
-  // }
-
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
     if(id){
       this.marcacaoService.getById(id).subscribe(result => this.marcacao = result);
     }
@@ -40,7 +34,7 @@ export class MarcacoesEliminarComponent {
     if (this.marcacao) {
       this.marcacaoService.delete(this.marcacao).subscribe(() => {
         console.log('Deleted successfully!');
-        this.router.navigate(['/home']);
+        this.router.navigate(['']);
       });
     }
   }

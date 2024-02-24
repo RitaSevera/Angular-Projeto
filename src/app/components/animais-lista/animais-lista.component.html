@@ -1,0 +1,37 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Espécie</th>
+      <th scope="col">Raça</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Data de nascimento</th>
+      <th scope="col">ID Tutor</th>
+    </tr>
+  </thead>
+
+<tbody>
+  @for (animal of animais; track animal.id) {
+	  <tr>
+	    <td>{{ animal.nome }}</td>
+	    <td>{{ animal.especie }}</td>
+	    <td>{{ animal.raca }}</td>
+	    <td>{{ animal.sexo }}</td>
+      <td>{{ animal.dataNascimento }}</td>
+      <td>{{ animal.tutorId }}</td>
+      <button type="button" class="btn btn-info" [routerLink]="['/editar-animal/',animal.id]">Editar</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-animal/', animal.id]">Eliminar</button>
+	  </tr>
+  } @empty {
+    @if (animais) {
+	    <tr>
+	      <td colspan="4">Não há animais!</td>
+	    </tr>
+    } @else {
+	    <tr>
+	      <td colspan="4">A carregar os animais...</td>
+	    </tr>
+    }
+  }
+</tbody>
+</table>

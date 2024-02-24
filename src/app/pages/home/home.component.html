@@ -1,14 +1,42 @@
-<!-- <p>home works!</p> -->
 <br>
 <div>
   <div>
     <h4>Marcações</h4>
   </div>
   <div>
-    <app-marcacoes-lista/>
+    <app-marcacoes-lista />
   </div>
   <div>
     <br>
     <button type="button" class="btn btn-outline-dark" [routerLink]="['/nova-marcacao']">Nova marcação</button>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <h4>Animais</h4>
+  </div>
+  <div>
+    <app-animais-lista />
+  </div>
+  <div>
+    <br>
+    <button type="button" class="btn btn-outline-dark" [routerLink]="['/novo-animal']">Inserir novo animal</button>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h4>Tutor</h4>
+  </div>
+  <div>
+    <app-tutores-lista />
+  </div>
+  <div>
+    <br>
+    <button type="button" class="btn btn-outline-dark" [routerLink]="['/novo-tutor']">Inserir novo tutor</button>
   </div>
 </div>

@@ -40,7 +40,7 @@ export class MarcacoesCriarComponent {
           })
           .subscribe({
             next: (value) => {
-              this.router.navigate(['/home']);
+              this.router.navigate(['']);
             },
             error: (err) => {
               console.error('Erro ao criar uma nova marcação!', err);

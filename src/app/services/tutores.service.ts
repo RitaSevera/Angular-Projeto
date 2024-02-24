@@ -11,6 +11,7 @@ export class TutoresService {
   constructor(private http: HttpClient) { }
 
   tutoresUrl = 'http://localhost:3000/tutores'
+  tutor: Array<Tutores> = []
 
   getAll(): Observable<Tutores[]> {
     return this.http.get<Tutores[]>(this.tutoresUrl);
@@ -18,13 +19,13 @@ export class TutoresService {
   getById(id: string): Observable<Tutores> {
     return this.http.get<Tutores>(`${this.tutoresUrl}/${id}`);
   }
-  create(marcacao: Tutores): Observable<Tutores> {
-    return this.http.post<Tutores>(this.tutoresUrl, marcacao);
+  create(tutor: Tutores): Observable<Tutores> {
+    return this.http.post<Tutores>(this.tutoresUrl, tutor);
   }
-  update(marcacao: Tutores): Observable<Tutores> {
-    return this.http.put<Tutores>(`${this.tutoresUrl}/${marcacao.id}`, marcacao);
+  update(tutor: Tutores): Observable<Tutores> {
+    return this.http.put<Tutores>(`${this.tutoresUrl}/${tutor.id}`, tutor);
   }
-  delete(marcacao: Tutores): Observable<Tutores> {
-    return this.http.delete<Tutores>(`${this.tutoresUrl}/${marcacao.id}`);
+  delete(tutor: Tutores): Observable<Tutores> {
+    return this.http.delete<Tutores>(`${this.tutoresUrl}/${tutor.id}`);
   }
 }

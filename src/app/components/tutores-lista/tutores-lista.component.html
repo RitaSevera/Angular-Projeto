@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Telemóvel</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+
+<tbody>
+  @for (tutor of tutores; track tutor.id) {
+	  <tr>
+	    <td>{{ tutor.nome }}</td>
+	    <td>{{ tutor.telemovel }}</td>
+	    <td>{{ tutor.email }}</td>
+      <button type="button" class="btn btn-info" [routerLink]="['/editar-tutor/',tutor.id]">Editar</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-tutor/', tutor.id]">Eliminar</button>
+	  </tr>
+  } @empty {
+    @if (tutores) {
+	    <tr>
+	      <td colspan="4">Não há tutores!</td>
+	    </tr>
+    } @else {
+	    <tr>
+	      <td colspan="4">A carregar os tutores...</td>
+	    </tr>
+    }
+  }
+</tbody>
+</table>
+

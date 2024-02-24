@@ -1,5 +1,3 @@
-<!-- <p>marcacoes-lista works!</p> -->
-
 <table class="table">
   <thead>
     <tr>
@@ -21,8 +19,8 @@
 	    <td>{{ marcacao.dataHora }}</td>
       <td>{{ marcacao.realizada }}</td>
       <td>{{ marcacao.cancelada }}</td>
-      <button type="button" class="btn btn-info" [routerLink]="['/editar-marcacao/marcacao.id']">Editar</button>
-      <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-marcacao/marcacao.id']">Eliminar</button>
+      <button type="button" class="btn btn-info" [routerLink]="['/editar-marcacao/',marcacao.id]">Editar</button>
+      <button type="button" class="btn btn-secondary" [routerLink]="['/eliminar-marcacao/', marcacao.id]">Eliminar</button>
 	  </tr>
   } @empty {
     @if (marcacoes) {

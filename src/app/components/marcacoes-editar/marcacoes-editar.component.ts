@@ -19,8 +19,8 @@ export class MarcacoesEditarComponent {
     animalId: new FormControl('', Validators.required),
     tutorId: new FormControl('', Validators.required),
     dataHora: new FormControl('', Validators.required),
-    realizada: new FormControl('', Validators.required),
-    cancelada: new FormControl('', Validators.required),
+    realizada: new FormControl(''),
+    cancelada: new FormControl(''),
   })
   submitted: boolean = false;
   criarSubscription?:Subscription;
@@ -46,10 +46,10 @@ export class MarcacoesEditarComponent {
         })
         .subscribe({
           next: (value) => {
-            this.router.navigate(['/editar-marcacao/marcacao.id']);
+            this.router.navigate(['']);
           },
           error: (err) => {
-            console.error('Erro ao criar uma nova marcação!', err);
+            console.error('Erro ao editar a marcação!', err);
           },
         });
       }
